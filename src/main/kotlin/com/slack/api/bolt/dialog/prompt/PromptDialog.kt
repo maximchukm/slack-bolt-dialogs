@@ -3,7 +3,7 @@ package com.slack.api.bolt.dialog.prompt
 import com.slack.api.bolt.dialog.Dialog
 import com.slack.api.bolt.dialog.context.DialogContext
 
-open class PromptDialog : Dialog {
+abstract class PromptDialog : Dialog {
 
     private var dialogContext: DialogContext? = null
     private val prompts: MutableList<Prompt> = ArrayList()
