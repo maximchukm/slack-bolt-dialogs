@@ -27,7 +27,7 @@ class PromptDialogBoltEventHandler(
 
             dialog.nextPrompt()
                 ?.run {
-                    answer = payload.event.text.replace(Regex("<.*>"), "")
+                    answer = payload.event.text.replace(Regex("<.*>"), "").trim()
                     listeners[dialog.javaClass]?.onPromptCompleted(dialog, this, context)
                 }
 
